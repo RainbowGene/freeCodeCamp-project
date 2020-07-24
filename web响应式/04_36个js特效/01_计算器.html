@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_计算器</title>
+</head>
+
+<body>
+  <main>
+    <input type="number" size="5" id="num1" value="">
+    <select id="ysf">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">÷</option>
+      <option value="%">%</option>
+    </select>
+    <input type="number" size="5" id="num2" value="">
+    <input type="button" value="计算" id="btn">
+    <p id="res"></p>
+  </main>
+
+  <script>
+    document.getElementById('btn').onclick = () => {
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+      let ysf = document.getElementById('ysf').value;
+      let res = "结果:"
+      switch (ysf) {
+        case "+": res += num1 + num2; break;
+        case "-": res += num1 - num2; break;
+        case "*": res += num1 * num2; break;
+        case "/": res += num1 / num2; break;
+        case "%": res += num1 % num2; break;
+      }
+      document.getElementById('res').innerHTML = (num1 && num2) ? res : 'err:请输入完整!';
+    }
+  </script>
+</body>
+
+</html>

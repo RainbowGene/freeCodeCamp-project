@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>弹球动画</title>
+  <style>
+    #dv {
+      width: 600px;
+      height: 450px;
+      margin: 0 auto;
+      background-color: #ccc;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="弹出" id="btn">
+  <div id="dv">
+
+  </div>
+  <script>
+    let dv = document.getElementById('dv')
+    let colors = ['yellow', 'green', 'yellowgreen', 'blue', 'orange']
+    document.getElementById('btn').onclick = () => {
+      let ball = document.createElement('div')
+      ball.style.cssText = "position:absolute;border-radius:50%;"
+      ball.style.height = "50px";
+      ball.style.width = "50px"
+      ball.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+      // 居中
+      let top = dv.clientHeight / 2 - ball.offsetHeight / 2;
+      let left = dv.clientWidth / 2 - ball.offsetWidth / 2;
+      ball.style.left = left + 'px';
+      ball.style.top = top + 'px';
+      dv.appendChild(ball)
+
+      // 移动速度随机
+      let x = y = Math.floor(Math.random() * 20) + 1 //+1 是防止为0
+      setInterval(() => {
+        top += y
+        left += x
+
+        // 超出容器改方向
+        if (top > (dv.offsetHeight - ball.offsetHeight) || top < 0) {
+          y = -y
+        }
+        if (left > (dv.offsetWidth - ball.offsetWidth) || left < 0) {
+          x = -x
+        }
+
+        ball.style.left = left + 'px';
+        ball.style.top = top + 'px';
+      }, 30)
+    }
+  </script>
+</body>
+
+</html>

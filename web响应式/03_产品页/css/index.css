@@ -130,7 +130,9 @@ main .main_banner img {
 main .main_card {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin-bottom: 2rem;
+  padding: 0 3rem;
 }
 
 main .main_card .card_item {

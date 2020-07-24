@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日历</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .data {
+      width: 300px;
+      margin: 10px auto;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 0;
+    }
+
+    .data p {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      background-color: #eee;
+    }
+
+    #date {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    #date li {
+      width: 14.2%;
+    }
+
+    #date li:hover {
+      box-shadow: 0 0 0 0.5px red;
+      cursor: pointer;
+      /* 不占边框 */
+    }
+
+    .active {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <input type="date" name="" id=""> -->
+
+  <div class="data">
+    <p>
+      <span id="prev">上一月</span>
+      <span id="year">2022</span>
+      <span id="next">下一月</span>
+    </p>
+    <h5 id="month">七月</h5>
+    <ul>
+      <li>日</li>
+      <li>一</li>
+      <li>二</li>
+      <li>三</li>
+      <li>四</li>
+      <li>五</li>
+      <li>六</li>
+    </ul>
+    <ul id="date"></ul>
+  </div>
+
+  <script>
+    (function () {
+      let date = new Date();
+      let cYear = date.getFullYear();
+      let cMonth = date.getMonth();
+      // 填充日期
+      addDate(cYear, cMonth);
+
+      document.getElementById('prev').onclick = () => {
+        if (cMonth == 0) {
+          cYear--
+          cMonth = 11
+        }
+        else {
+          cMonth--
+        }
+        addDate(cYear, cMonth)
+      }
+      document.getElementById('next').onclick = () => {
+        if (cMonth == 11) {
+          cYear++
+          cMonth = 0
+        }
+        else {
+          cMonth++
+        }
+        addDate(cYear, cMonth)
+      }
+
+      function addDate(cYear, cMonth) {
+        let cDay = date.getDate(); // 当前天
+        let monthArr = ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
+
+        document.getElementById('year').innerHTML = cYear;
+        document.getElementById('month').innerHTML = monthArr[cMonth];
+
+        let html = "";
+        // 每个月的一号是周几？
+        let weekDay = new Date(cYear, cMonth, 1).getDay() // 3
+        // 当月天数
+        let days = new Date(cYear, cMonth + 1, 0).getDate();
+
+        for (let w = 0; w < weekDay; w++) {
+          html += "<li></li>"
+        }
+        for (let i = 1; i <= days; i++) {
+          if (i == cDay && cMonth == date.getMonth() && cYear == date.getFullYear()) {
+            html += "<li class='active'>" + i + "</li>"
+          }
+          else {
+            html += "<li>" + i + "</li>"
+          }
+        }
+
+        document.getElementById('date').innerHTML = html
+      }
+    })()
+  </script>
+</body>
+
+</html>

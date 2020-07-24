@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>广告弹窗(bom)</title>
+</head>
+
+<body>
+  <script>
+    (function () {
+      let subwin = null
+      setTimeout(() => {
+        subwin = window.open('', '_blank', 'width=300,height=300,left=0,top=0')
+        let x = window.innerWidth / 2 - subwin.outerWidth / 2;
+        let y = window.innerHeight / 2 - subwin.outerHeight / 2;
+        // 放在中间
+        subwin.moveTo(x, y)
+      }, 3000)
+
+      setTimeout(() => {
+        if (!subwin.closed) {
+          subwin.closed()
+        }
+      }, 6000)
+    })()
+  </script>
+</body>
+
+</html>
