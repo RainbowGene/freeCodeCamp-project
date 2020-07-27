@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跟随移动</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #logo {
+      position: absolute;
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="logo" src="https://i0.hdslb.com/bfs/archive/ab040df590b2bd08ad74f8753e4f853d80e83d45.png" alt="">
+  <script>
+    (function () {
+      let logo = document.getElementById('logo')
+
+      window.onmousemove = (e) => {
+        let event = e || window.event
+        // console.log(event.clientX)
+        let x = event.clientX
+        let y = event.clientY
+        // 接近边距时消失
+        if (x <= 10 || x >= (document.body.clientWidth - logo.offsetWidth)) { // 不出现水平滚动条
+          x = -300
+        }
+        if (y <= 10) {
+          y = -300
+        }
+
+        // 移动元素
+        logo.style.left = x + 'px'
+        logo.style.top = y + 'px'
+
+      }
+    })()
+  </script>
+</body>
+
+</html>

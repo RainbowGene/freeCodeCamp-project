@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定导航栏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .container {
+      width: 100%;
+      position: relative;
+    }
+
+    #top,
+    #nav {
+      height: 80px;
+      margin: 0 20px;
+      border: 1px solid black;
+    }
+
+    #nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 99;
+    }
+
+    #main {
+      height: 1200px;
+      margin: 0 20px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="top">
+      top
+    </div>
+    <div id="nav">
+      <div class="left">zuo</div>
+      <div class="center">zhong</div>
+      <div class="right">you</div>
+    </div>
+    <div id="main">
+
+    </div>
+  </div>
+  <script>
+    (function () {
+      window.onload = () => {
+        let top = document.getElementById('top')
+        let nav = document.getElementById('nav')
+        let main = document.getElementById('main')
+        console.log(top)
+
+        // 滚动事件
+        window.onscroll = () => {
+          if (document.documentElement.scrollTop >= top.offsetHeight) {
+            nav.style.cssText = "position:fixed;top:0px;right:0;left:0;"
+            main.style.marginTop = nav.offsetHeight + 'px';
+          }
+          else {
+            nav.style.cssText = "position: static;"
+            main.style.marginTop = '0px'
+          }
+        }
+      }
+    })()
+  </script>
+</body>
+
+</html>

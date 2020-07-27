@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拖拽事件</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #dv {
+      width: 200px;
+      height: 60px;
+      background: #ccc;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dv"></div>
+  <script>
+    (function () {
+      let dv = document.getElementById('dv')
+      let isDown = false // 开关
+      let x = y = 0
+      let l = 0
+      let t = 0
+
+      // 鼠标按下
+      dv.onmousedown = (e) => {
+        let event = e || window.event
+        x = event.clientX
+        y = event.clientY
+        l = dv.offsetLeft
+        t = dv.offsetTop
+        isDown = true
+        dv.style.cursor = 'move'
+      }
+      // 抬起
+      dv.onmouseup = (e) => {
+        let event = e || window.event
+        isDown = false
+        dv.style.cursor = 'default'
+      }
+      window.onmousemove = (e) => {
+        if (!isDown) return;
+        let event = e || window.event
+        let nl = event.clientX - (x - l)
+        let nt = event.clientY - (y - t)
+        dv.style.left = nl + 'px'
+        dv.style.top = nt + 'px'
+      }
+    })()
+  </script>
+</body>
+
+</html>
