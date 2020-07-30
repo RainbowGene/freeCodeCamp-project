@@ -56,4 +56,14 @@ h1~h6:重写过，可以直接在元素中: class="h1"
 .rounded 和 .rounded-[] 实现各种方位圆角
 
 ### 工具类
+1) .close 和 &time; 可以实现关闭按钮
+ <button class=".close float-right"><span>&time;</span></button>
+2) 浮动: .float-[left|right] 
+   相邻元素清除浮动: .float-none
+   父类清除浮动： .clearFix
+   不同屏幕浮动; float-[lg|xl|md|ms|xs]-[left|right]
+3) text-hide ： 隐藏标签内容
+4) overflow-[auto|hidden] 设置区域显示的方式
+5）.visible 或 .invisible 设置内容可见与否
+6) .align-* 设置内容文本对齐方式
 

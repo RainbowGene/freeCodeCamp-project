@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片滚动</title>
+  <style>
+    #demo {
+      width: 500px;
+      background: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    #one {
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="demo">
+    <span id="one">
+      <img src="https://i2.hdslb.com/bfs/archive/d8fe2aca48209df61605bca476c940c3135195d2.jpg@140w_79h_1c_100q.webp"
+        alt="">
+      <img src="https://i2.hdslb.com/bfs/archive/dfc43ea3b9e10621973b02def12fbc25f9c1dd92.png@140w_79h_1c_100q.webp"
+        alt="">
+      <img src="https://i2.hdslb.com/bfs/archive/7617747b2f002c813061aca3e3bcc4baad95847a.jpg@140w_79h_1c_100q.webp"
+        alt="">
+      <img src="https://i2.hdslb.com/bfs/archive/6e20e918f730e47e70c5095ee92a55302ca8514b.png@140w_79h_1c_100q.webp"
+        alt="">
+      <img src="https://i1.hdslb.com/bfs/archive/58b7f897687cf5f95ce102463ccb0c2d9f5419cf.jpg@140w_79h_1c_100q.webp"
+        alt="">
+    </span>
+    <span id="two"></span>
+  </div>
+  <script>
+    let demo = document.getElementById('demo')
+    let one = document.getElementById('one')
+    let two = document.getElementById('two')
+    two.innerHTML = one.innerHTML // 复制一份
+
+    function marquee() {
+      // 判断方向
+      if (demo.scrollLeft >= demo.scrollWidth / 2) {
+        demo.scrollLeft = 0
+      }
+      demo.scrollLeft += 1
+    }
+
+    let time = setInterval(marquee, 10)
+  </script>
+</body>
+
+</html>

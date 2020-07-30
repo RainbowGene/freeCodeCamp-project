@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.min.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <title>首页</title>
+</head>
+
+<body>
+  <!-- 顶部导航开始 -->
+  <nav>
+    <div class="container">
+      <div class="row">
+        <div class="col shadow-md">
+          <nav class="navbar p-1 navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand d-lg-none" href="#"><img src="./img/logo.png" style="max-width: 90px;"
+                class="img-fluid" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item  justify-content-center active">
+                  <a class="nav-link" style="padding-left: 25px;background:url('./img/hl.png') no-repeat 0 center;"
+                    href="#">融职科技</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="padding-left: 25px;background:url('./img/llt.png') no-repeat 0 center;"
+                    href="#">学习园地</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="padding-left: 25px;background:url('./img/zzt.png') no-repeat 0 center;"
+                    href="#">职教园</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    培训模式
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    方向
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" tabindex="1" aria-disabled="true" class="nav-link disabled">Web全栈就业办 <i
+                      class="mark text-danger">$9800</i>
+                    <s>$19800</s></a>
+                </li>
+              </ul>
+              <div class="ml-auto nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                  style="padding-left: 25px;background:url('./img/wx.jpg') no-repeat 0 center;" href="#"
+                  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  咨询微信
+                </a>
+                <div class="dropdown-menu" style="border: none;" aria-labelledby="navbarDropdownMenuLink">
+                  <img src="./img/qrcode.png" style="width: 120px; border: 1px solid grey;" alt="">
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 顶部导航结束 -->
+  <!-- 头部区域开始 -->
+  <header class="mt-4 d-none d-lg-block">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <img src="./img/logo.png" style="max-width: 120px;height: auto;" alt="荣智教育">
+        </div>
+        <div class="col mt-3">
+          <blockquote class="text-center">
+            <p>在工作中学习，在学习中工作</p>
+          </blockquote>
+        </div>
+        <div class="col">
+          <div class="text-right">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success">Action</button>
+              <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">学习猿地</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-info">Action</button>
+              <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">直销云</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- 头部区域结束 -->
+  <!-- 轮播开始 移动设备 -->
+  <section class="mt-4 d-lg-none">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <img src="./img/canp.png" class="d-block w-100" alt="...">
+
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="./img/jiaof.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="./img/zuob.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 轮播结束 -->
+  <!-- 轮播开始 PC设备 -->
+  <section id="player" class="mt-4 d-none d-lg-block">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div id="lunbo" class="carousel">
+            <a href="#" target="_blank" data-color="#6a296e" class="carousel-item active"><img src="img/player/1.jpg"
+                class="d-block w-100" alt=""></a>
+            <a href="#" target="_blank" data-color="#5600d3" class="carousel-item"><img src="img/player/2.jpg"
+                class="d-block w-100" alt=""></a>
+            <a href="#" target="_blank" data-color="#0b0f3e" class="carousel-item"><img src="img/player/3.jpg"
+                class="d-block w-100" alt=""></a>
+            <a href="#" target="_blank" data-color="#100e64" class="carousel-item"><img src="img/player/4.jpg"
+                class="d-block w-100" alt=""></a>
+            <a href="#" target="_blank" data-color="#4477e2" class="carousel-item"><img src="img/player/5.jpg"
+                class="d-block w-100" alt=""></a>
+            <a href="#" target="_blank" data-color="#110e45" class="carousel-item"><img src="img/player/6.jpg"
+                class="d-block w-100" alt=""></a>
+          </div>
+          <div class="card w-25 mt-3 border-0 ml-auto shadow align-content-center"
+            style="background: rgba(0,0,0,0.4);line-height: 15px;font-size: 15px;">
+            <div id="rlist" class="list-group">
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+              <a class="list-group-item bg-transparent text-white-50 text-decoration-none border-0" href="#">最牛web技巧开发班
+                $9800</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 轮播结束 -->
+  <!-- 收获开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">你的收获</h4>
+            <small class="text-muted pl-2">掌握的是一门就业的技术，为成长积蓄力量</small>
+          </div>
+        </div>
+      </div>
+      <div class="row contain">
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h1.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">实习岗位</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h2.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">工作经验</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h3.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">全栈技能</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h4.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">商业项目</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h5.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">人脉积累</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-4 col-md-4 col-lg mt-2" style="height: 120px;line-height: 120px;">
+          <div class="text-center w-100 h-100 rounded" style="background: url('./img/h6.jpg');">
+            <a class="d-inline-block text-white text-decoration-none" href="#">
+              <h4 class="th4">期望工作</h4>
+              <i class="d-none d-lg-block"></i>
+              <div class="span d-none d-lg-block">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 收获结束 -->
+  <!-- 关注开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">关注我们</h4>
+            <small class="text-muted pl-2">重塑IT人才培养模式，提供可交付的程序员</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <!-- 视频播放器插件 Dplayer -->
+          <div class="film_focus">
+            <div class="film_focus_imgs_wrap main-content">
+              <ul class="film_focus_imgs w-85">
+                <li>
+                  <div id="dplayer1" style="width:100%;height:349px;"></div>
+                </li>
+                <li>
+                  <div id="dplayer2" style="width:100%;height:349px;"></div>
+                </li>
+                <li>
+                  <div id="dplayer3" style="width:100%;height:349px;"></div>
+                </li>
+                <li>
+                  <div id="dplayer4" style="width:100%;height:349px;"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="film_focus_desc d-none d-md-block">
+              <h3>Web全栈开发就业班10大核心优势</h3>
+              <ul id="film" class="film_focus_nav">
+                <li class="cur">
+                  <img width="100" height="79" src="./img/player/t1.png" alt="Web全栈开发就业班10大核心优势" />
+                </li>
+                <li>
+                  <img width="100" height="79" src="./img/player/t2.png" alt="融职IT教育首创“坐班”学习模式" />
+                </li>
+                <li>
+                  <img width="100" height="79" src="./img/player/t3.png" alt="EduWork只为培养可以交付的程序员" />
+                </li>
+                <li>
+                  <img width="100" height="79" src="./img/player/t4.png" alt="浸入【智校云】项目组，在工作中学习" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        2
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- 关注结束 -->
+  <!-- 成长开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">成长平台</h4>
+            <small class="text-muted pl-2">浸入到开发组中实习，在工作中学技术涨经验</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          1
+        </div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+      <div class="row">
+        <div class="col-1">1</div>
+        <div class="col-2">2</div>
+        <div class="col">3</div>
+        <div class="col">3</div>
+        <div class="col-2">2</div>
+        <div class="col-1">1</div>
+      </div>
+      <div class="row">
+        <div class="col">1</div>
+      </div>
+    </div>
+  </section>
+  <!-- 成长结束 -->
+  <!-- 培养开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">培养模式</h4>
+            <small class="text-muted pl-2">千人千面的培养方案，两种学习模式，一种实习模式</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">1</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+        <div class="col-3">3</div>
+        <div class="col-1">1</div>
+      </div>
+    </div>
+  </section>
+  <!-- 培养结束 -->
+  <!-- 面授开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">面授培训</h4>
+            <small class="text-muted pl-2">行业的价格￥19800，我们的价值 ￥29800，现在只需￥9800</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">2</div>
+        <div class="col-2">2</div>
+        <div class="col-1">1</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+      </div>
+      <div class="row">
+        <div class="col-2">2</div>
+        <div class="col-2">2</div>
+        <div class="col-1">1</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+      </div>
+      <div class="row">
+        <div class="col-2">2</div>
+        <div class="col-2">2</div>
+        <div class="col-1">1</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+      </div>
+      <div class="row">
+        <div class="col-2">2</div>
+        <div class="col-2">2</div>
+        <div class="col-1">1</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+      </div>
+    </div>
+  </section>
+  <!-- 面授结束 -->
+  <!-- 实习开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">实习目标</h4>
+            <small class="text-muted pl-2">按程序员职业发展规划，在项目组中安排开发岗位</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12"></div>
+      </div>
+    </div>
+  </section>
+  <!-- 实习结束 -->
+  <!-- 总结开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">你的总监</h4>
+            <small class="text-muted pl-2">不仅是讲师，也是现任项目组中的开发总监</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">1</div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">2</div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">3</div>
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12">4</div>
+      </div>
+    </div>
+  </section>
+  <!-- 总结结束 -->
+  <!-- 对标培训开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">对标培训</h4>
+            <small class="text-muted pl-2">培训是被动学习， 实习则是主动成长模式</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+      <div class="row">
+        <div class="col">5</div>
+        <div class="col-2">2</div>
+        <div class="col">5</div>
+      </div>
+    </div>
+  </section>
+  <!-- 对标培训结束 -->
+  <!-- 工作环境开始 -->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div>
+            <h4 class="d-inline-block">工作环境</h4>
+            <small class="text-muted pl-2">工作环境</small>
+          </div>
+        </div>
+      </div>
+      <!-- 移动端 -->
+      <div class="row d-lg-none pb-4">
+        <div class="col">
+          <!-- swiper5 插件 -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/t1.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/t2.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/t3.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/t4.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/t5.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="./img/t6.jpg" class="img-fluid" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PC端 -->
+      <div class="row d-none d-lg-block">
+        <div class="col">
+          <!-- 手风琴插件 -->
+          <div class="wrap">
+            <div class="pic1 pic">
+              <div class="pic_num1 pic_num"></div>
+            </div>
+            <div class="pic2 pic">
+              <div class="pic_num2 pic_num"></div>
+            </div>
+            <div class="pic3 pic">
+              <div class="pic_num3 pic_num"></div>
+            </div>
+            <div class="pic4 pic">
+              <div class="pic_num4 pic_num"></div>
+            </div>
+            <div class="pic5 pic">
+              <div class="pic_num5 pic_num"></div>
+            </div>
+            <div class="pic6 pic">
+              <div class="pic_num6 pic_num"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 工作环境结束 -->
+  <!-- 底部开始 -->
+  <footer class="bg-dark text-light small" class="mt-4">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-sm-12 col-md-10">
+          <p class="mt-4">EduWork 是智校云旗下专注程序员培养的实习平台。</p>
+          <ul class="nav">
+            <li><a href="#" class="nav-link text-white pl-0">关于我们</a></li>
+            <li><a href="#" class="nav-link text-white pl-0">联系我们</a></li>
+            <li><a href="#" class="nav-link text-white pl-0">加入我们</a></li>
+            <li><a href="#" class="nav-link text-white pl-0">帮助中心</a></li>
+            <li><a href="#" class="nav-link text-white pl-0">学习猿地</a></li>
+            <li><a href="#" class="nav-link text-white pl-0">智校云</a></li>
+          </ul>
+          <p class="mt-3 text-muted"><i>©2018-2020 北京智校云网络科技有限公司 <span class="ms-3">版权所有</span> 京ICP备19057319号-1</i></p>
+        </div>
+        <div class="col-sm-12 col-md-2 text-center mt-2">
+          <img src="./img/qrcode.png" style="max-width: 120px;height: auto;" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- 底部结束 -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/DPlayer.min.js"></script>
+  <script src="./js/index.js"></script>
+
+  <script>
+    // 视频播放器
+    $(function () {
+      var dp1;
+      var dp2;
+      var dp3;
+      var dp4;
+      $(function () {
+
+
+        dp1 = new DPlayer({
+          container: document.getElementById('dplayer1'),
+          video: {
+            url: '//cdn.eduwork.cn/mp4/youshi.mp4',
+            pic: 'images/player/p1.png',
+            mutex: true,
+          },
+          danmaku: {
+            id: "212121212",
+            api: 'onedm.js?',
+          },
+        });
+
+        dp2 = new DPlayer({
+          container: document.getElementById('dplayer2'),
+          video: {
+            url: '//cdn.eduwork.cn/mp4/three.mp4',
+            pic: 'images/player/p2.png',
+            mutex: true,
+          },
+          danmaku: {
+            id: "2121321221212",
+            api: 'twodm.js?',
+          },
+        });
+
+        dp3 = new DPlayer({
+          container: document.getElementById('dplayer2'),
+          video: {
+            url: '//cdn.eduwork.cn/mp4/four.mp4',
+            pic: 'images/player/p3.png',
+            mutex: true,
+          },
+          danmaku: {
+            id: "2121212dsdsds12",
+            api: 'threedm.js?',
+          },
+        });
+
+        dp4 = new DPlayer({
+          container: document.getElementById('dplayer3'),
+          video: {
+            url: '//cdn.eduwork.cn/mp4/four.mp4',
+            pic: 'images/player/p4.png',
+            mutex: true,
+          },
+          danmaku: {
+            id: "212121dsdsdsds212",
+            api: 'fourdm.js?',
+          },
+        });
+      });
+    })
+
+      (function (A) {
+        A.fn.th_video_focus = function (E) {
+
+          var G = {
+            actClass: "cur",
+            navContainerClass: ".focus_pic_preview",
+            focusContainerClass: ".focus_pic",
+            animTime: 600,
+            delayTime: 5000
+          };
+
+          if (E) {
+            A.extend(G, E)
+          }
+
+          var C = G.actClass, D = G.navContainerClass, B = G.focusContainerClass, F = G.animTime, H = G.delayTime, I = null;
+
+          return this.each(function () {
+
+            var O = A(this), M = A(D + " li", O), P = A(B + " li", O), L = M.length, K = O.height();
+
+            function N(R) {
+              var V = K * R * -1;
+              var U = A(B + " li", O), W = null, T = null;
+              for (var S = 0; S <= R; S++) {
+                W = U.eq(S);
+                T = W.find('script[type="text/templ"]');
+                if (T.length > 0) {
+                  W.html(T.html())
+                }
+              }
+              A(B, O).stop().animate({ top: V }, F, function () {
+                var Y = O.find("h3"), X = Y.height();
+                Y.height(0).html(A(".film_focus_nav li").eq(R).find("img").attr("alt")).animate({ height: X }, 600)
+
+              });
+              A(D + " li").eq(R).addClass(C).siblings().removeClass(C)
+
+              dp1.pause();
+              dp2.pause();
+              dp3.pause();
+              dp4.pause();
+
+
+            }
+
+            function Q() {
+              if (I) {
+                clearInterval(I)
+              }
+              I = setInterval(function () {
+                var R = A(D + " li." + C).index();
+                N((R + 1) % L)
+              }, H)
+            }
+
+            dp1.on("play", function () {
+              if (I) {
+                clearInterval(I)
+              }
+            });
+
+            dp2.on("play", function () {
+              if (I) {
+                clearInterval(I)
+              }
+            });
+
+            dp3.on("play", function () {
+              if (I) {
+                clearInterval(I)
+              }
+            });
+
+            dp3.on("play", function () {
+              if (I) {
+                clearInterval(I)
+              }
+            });
+
+
+
+            O.hover(function () {
+              if (I) {
+                clearInterval(I)
+              }
+            }, function () {
+              if (dp1.video.paused && dp2.video.paused && dp3.video.paused && dp4.video.paused) {
+                Q()
+              }
+
+            });
+
+            var J = null;
+
+            M.hover(function () {
+
+              var R = A(this).index();
+
+              if (I) {
+                clearInterval(I)
+              }
+              J = setTimeout(function () {
+                N(R)
+              }, 300)
+            }, function () {
+              if (J) {
+                clearTimeout(J)
+              }
+              Q()
+            }).click(function (T) {
+              var R = A(this).index(), S = P.eq(R).find("a");
+              if (document.uniqueID || window.opera) {
+                S[0].click();
+                T.stopPropagation();
+                T.preventDefault()
+              }
+            });
+
+            Q()
+
+          })
+        }
+
+      })(jQuery);
+
+    $(function () {
+
+      //第二个焦点图
+      $(".film_focus").th_video_focus({
+        navContainerClass: ".film_focus_nav",
+        focusContainerClass: ".film_focus_imgs",
+        delayTime: 3000
+      });
+
+    });
+  </script>
+</body>
+
+</html>
