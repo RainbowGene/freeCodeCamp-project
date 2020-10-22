@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>屏幕弹球</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .qiu {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn">生成小球</button>
+
+  <script src="../../05_bs首页/src/js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('.btn').click(function () {
+        var qiu = $('<div class="qiu"></div>').appendTo('body')
+        var x = y = 5 // 速度
+        setInterval(function () {
+          var l = t = 30 // 偏移量
+          if (l >= $(window).width() - $('.qiu').outerWidth || l < 0) {
+            x = -x
+          }
+          if (t >= $(window).height() - $('.qiu').outerHeight || t < 0) {
+            y = -y
+          }
+          l += x
+          t += y
+          qiu.offset({ "left": l, 'top': t })
+        }, 80)
+      })
+    })
+  </script>
+</body>
+
+</html>

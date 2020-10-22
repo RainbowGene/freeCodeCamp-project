@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定导航栏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    header,
+    nav,
+    section {
+      padding: 0 30px;
+    }
+
+    header {
+      height: 200px;
+    }
+
+    section {
+      height: 1000px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 80px;
+    }
+
+    nav .left,
+    .right {
+      width: 80px;
+    }
+
+    nav .center {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="top">
+      <p>我是头部</p>
+    </header>
+    <nav class="nav">
+      <div class="left">左</div>
+      <div class="center">中</div>
+      <div class="right">右</div>
+    </nav>
+    <section class="main">
+      <p>我是内容</p>
+    </section>
+  </div>
+  <script src="../../05_bs首页/src/js/jquery.min.js"></script>
+  <script>
+    // jquery 实现导航栏的固定定位
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > $('.top').height()) {
+          $('.nav').css('position', 'fixed').css('top', '0').css('left', '0').css('right', '0') // 宽度100%
+          $('.main').css('marginTop', $('.nav').height()) // 看起来不会抖动
+        }
+        if ($(this).scrollTop() <= $('.top').height()) {
+          $('.nav').css('position', 'static')
+          $('.main').css('marginTop', '0')
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

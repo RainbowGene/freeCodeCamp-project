@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开屏广告+登录注册</title>
+  <script src="./js/vue.js"></script>
+  <script src="./js/axios.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* 广告遮罩 */
+    .banner {
+      height: 100vh;
+      width: 100vw;
+      background-image: url(./img/banner1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      position: relative;
+    }
+
+    .banner .timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 5vh;
+      width: 20vw;
+      padding: 0 2vw;
+      border: 1px solid blanchedalmond;
+      border-radius: 2vh;
+      background-color: rgba(255, 255, 0, 0.1);
+      color: white;
+
+      position: absolute;
+      top: 2vh;
+      right: 2vh;
+    }
+
+    /* 登录页 */
+    .form {
+      height: 100vh;
+      width: 100vw;
+      background-image: url(./img/cover1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-con {
+      padding-top: 20vh;
+    }
+
+    .form-con h2 {
+      text-align: center;
+    }
+
+    .form-con input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 84vw;
+      height: 8vh;
+      border-radius: 10vw;
+      margin: 2vh auto;
+      padding: 0 4vw;
+      outline-style: none;
+
+      color: white;
+      border: 1px solid purple;
+      font-size: 3vh;
+      /* font-weight: bold; */
+      background-color: rgba(255, 255, 0, 0.1);
+    }
+
+    .form-con input:focus {
+      border-color: purple;
+    }
+
+    .form-con .btn {
+      background-color: brown;
+    }
+
+    .form-con .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 广告遮罩层 -->
+    <div v-if="timer" class="banner">
+      <div class="timer" @click="getnav">{{time}} 跳过</div>
+    </div>
+
+    <!-- 登录页 -->
+    <div class="form" v-show="!timer">
+      <div class="form-con">
+        <!-- <h2>欢迎登录</h2> -->
+        <input type="text" name="username" v-model='form.username' />
+        <input type="password" name="password" v-model='form.password' />
+        <input type="button" class="btn" @click="login" value="登 录">
+        <div class="footer">
+          <span>我要注册</span><span>忘记密码</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data() {
+        return {
+          str: 'sss',
+          time: 5,
+          timer: null,
+          form: {
+            username: '',
+            password: ''
+          }
+        }
+      },
+      mounted() {
+        this.play()
+      },
+      methods: {
+        login() {
+          // 发送请求
+          if (this.form.username && this.form.password) {
+            console.log(JSON.parse(JSON.stringify(this.form)))
+            axios({
+              url: 'http://localhost:7001/login',
+              method: 'post',
+              data: this.form
+            }).then(res => {
+
+            }).catch(err => {
+              console.log(err)
+            })
+          }
+          else {
+            console.log('Please enter complate')
+          }
+        },
+        getnav() {
+          this.timer = null
+        },
+        // 定时器
+        play() {
+          this.timer = setInterval(this.autoPlay, 1000)
+        },
+        // 倒计时
+        autoPlay() {
+          if (this.time <= 0) {
+            this.timer = null
+            return clearInterval(this.timer)
+          }
+          this.time--
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
