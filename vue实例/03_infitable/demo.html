@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstarp.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="form-group">
+        <label>姓名</label>
+        <input type="text" v-model="form.username" class="form-control" placeholder="please enter">
+      </div>
+      <div class="form-group">
+        <label>学号</label>
+        <input type="number" v-model="form.id" class="form-control" placeholder="please enter">
+      </div>
+      <div class="form-group flex-row justify-content-center">
+        <label>是否住校</label>
+        <input type="checkbox" v-model="form.isSchrool">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="添加" class="btn btn-primary" @click="additem">
+        <input type="button" value="重置" class="btn btn-danger" @click="resitem">
+      </div>
+      <!-- table -->
+      <table class="table table-bordered table-hover">
+        <caption class="h4 text-info">学生信息表</caption>
+        <tr class="text-danger">
+          <th class="text-center">序号</th>
+          <th class="text-center">姓名</th>
+          <th class="text-center">学号</th>
+          <th class="text-center">是否住校</th>
+          <th class="text-center">操作</th>
+        </tr>
+        <tr v-if="list.length<1">
+          <td colspan="5" class="text-center text-muted">
+            <p>暂无数据</p>
+          </td>
+        </tr>
+        <tr v-for="(item,i) in list" :key="i" class="center text-center">
+          <td>{{i+1}}</td>
+          <td>{{item.username}}</td>
+          <td>{{item.id}}</td>
+          <td>{{item.isSchrool?'是':'否'}}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" @click="delitem(i)">删除</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          form: {
+            username: '',
+            id: null,
+            isSchrool: false
+          },
+          list: []
+        }
+      },
+      methods: {
+        additem() {
+          this.list.push(JSON.parse(JSON.stringify(this.form)))
+          this.resitem()
+        },
+        resitem() {
+          this.form.username = ''
+          this.form.id = null
+          this.form.isSchrool = false
+        },
+        delitem(i) {
+          this.list.splice(i, 1)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
